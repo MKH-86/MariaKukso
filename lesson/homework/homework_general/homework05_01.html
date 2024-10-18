@@ -45,7 +45,7 @@
     <p><form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
         <fieldset>
             <legend>Строка поиска</legend>
-        <input type ="Text" name = "Text" placeholder="Обязательное поле" autofocus>
+        <input type ="Text" name = "Text" required placeholder="Обязательное поле" autofocus>
         <input type ="submit" value ="Искать">
         <br>
         <input type ="radio" name ="Status" value="Site">на сайте
@@ -65,9 +65,9 @@
             <fieldset>
                 <legend>Авторизируйтесь</legend>
         
-        <input type ="login" name ="login" placeholder="Обязательное поле"> *Логин
+        <input type ="login" name ="login" required placeholder="Обязательное поле"> *Логин
         <br>
-        <input type ="password" name ="password" placeholder="Обязательное поле">*Пароль
+        <input type ="password" name ="password" required placeholder="Обязательное поле">*Пароль
         <br>
         <input type ="checkbox" name ="online" checked value="online">Оставаться в системе
         <br>
@@ -104,9 +104,9 @@
             <fieldset>
                 <legend>Оставьте Ваш отзыв</legend>
         
-        <input type ="name" name ="name"> *Имя
+        <input type ="name" name ="name" required placeholder ="Обязательное поле"> *Имя
         <br>
-        <input type ="e-mail" name ="e-mail" placeholder="Обязательное поле" required>*e-mail
+        <input type ="e-mail" name ="e-mail" required placeholder="Обязательное поле" required>*e-mail
         <br>
         <textarea name ="form" cols="20" raws="10" placeholder="Форма отправки"></textarea>
         <br>
