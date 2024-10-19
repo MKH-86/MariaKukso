@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Анкета2</title> 
+    <style>
+    TABLE {
+        table-layout: fixed;
+       }
+    </style>
+</head>
+<body>
+         
+
+<table width ="100%">
+    <h1 align="center">Заполните анкету</h1>
+    <tr>
+    <td>
+    <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+        <fieldset>
+            <legend>Личные данные</legend>
+        <input type ="text" name ="surname" required placeholder="Фамилия" pattern="^[А-Яа-яЁё]+$*." maxlength="25" autofocus> text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле<br>
+        <input type ="text" name ="name" required placeholder="Имя" pattern="^[А-Яа-яЁё]+$" maxlength="20"> text: Только кириллица, без пробелов, длина поля 20, обязательное поле<br>
+        <input type ="text" name ="last name" required placeholder="Отчество" pattern="^[А-Яа-яЁё]+$" maxlength="24"> text: Только кириллица, без пробелов, длина поля 24, обязательное поле <br>     
+    
+        <fieldset>
+            <legend>Паспортные данные</legend>
+            text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле<br>
+            text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле<br>
+        <input type ="text" name ="seria" required placeholder="Серия" pattern="[A-Z]{2}" minlength="2" maxlength="2"> 
+        <input type ="number" name ="number" required placeholder="Номер" pattern="[0-9]{7}" minlength="7" maxlength="7"> 
+        </fieldset>
+
+        <fieldset>
+            <legend>Дата рождения</legend>
+        <input type ="number" name ="year" pattern="[0-9]{4}" minlength="4" maxlength="4">  text:Год рождения 4-е цифры<br>
+        <select name="month" size="1">
+            <option value="1">Январь</option>
+            <option value="2">Февраль</option>
+            <option value="3">Март</option>
+            <option value="4">Апрель</option>
+            <option value="5">Май</option>
+            <option value="6">Июнь</option>
+            <option value="7">Июль</option>
+            <option value="8">Август</option>
+            <option value="9">Сентябрь</option>
+            <option value="10">Октябрь</option>
+            <option value="11">Ноябрь</option>
+            <option value="12">Декабрь</option>
+       </select> select:Месяц рождения<br>
+       <input type ="number" name ="day" pattern="[1-31]" step="1" min="1" max ="31"> number:Диапазон от 1 до 31 с шагом 1<br>
+        </fieldset>
+        <select name="nationality" size="1" required>
+            <option value="1">РБ</option>
+            <option value="2">РФ</option>
+        </select>(Национальность:выбор одного значения из списка, обязательное поле)<br>
+            Адрес:<br>
+            <textarea name ="address" cols="20" raws="10"></textarea>
+  </fieldset></form>
+  
+    <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+        <fieldset>
+            <legend>Интересы</legend>
+
+            <fieldset>
+                <legend>array:Хобби</legend>
+                <input type ="checkbox" name ="fishing" checked value="1">Рыбалка<br>
+                <input type ="checkbox" name ="astronomy" checked value="2">Астрономия<br>
+                <input type ="checkbox" name ="diving" checked value="3">Дайвинг<br>
+                <input type ="checkbox" name ="marks" checked value="4">Марки<br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Домашние животные (возможность выбора нескольких вариантов)</legend>
+                array:select multiple<br>
+                <select multiple name="housekeep anim">
+                    <optgroup label ="Попугаи">
+                        <option value="1">Волнистый</option>
+                        <option value="2">Ара</option>
+                        <option value="3">Неразлучник</option>
+                    </optgroup>
+                <optgroup label ="Рыба">
+                    <option value="1">Караси</option>
+                    <option value="2">Окуни</option>
+                    <option value="3">Осетр</option>
+                </optgroup>
+
+                <optgroup label ="Птицы">
+                    <option value="1">Стая ворон</option>
+                    <option value="2">Аист</option>
+                    <option value="3">Археоптнрикс</option>
+                </optgroup>
+                </select multiple>
+            </fieldset>
+            </fieldset></form>
+        
+            <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+                <fieldset>
+                    <legend>Данные для входа и восстановления пароля</legend>
+                        <input type ="text" name ="login" required placeholder="Логин" pattern="^[a-zA-Z]+$" min="5" maxlength="20">text: Только латиница, без пробелов,не менее 5 символов, длина поля 20, обязательное поле<br>
+                        <input type ="password" name ="password" required placeholder="Пароль" pattern="^[a-zA-Z]+$" min="10"  maxlength="20" autocomplete="off">  text: Только латиница, без пробелов,не менее 10 символов, длина поля 20, обязательное поле,отключить автозаполнение<br>
+                    </fieldset></form>
+
+            <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+                <fieldset>
+                    <legend>Координаты</legend>
+                                <input type ="email" name ="email" required placeholder="Введите адрес почты">email:Проверка должна осуществляться при помощи новых атрибутов тега input<br>
+                                <input type ="url" name ="url" required placeholder="Введите адрес сайта">url:Проверка должна осуществляться при помощи новых атрибутов тега input<br>
+                </fieldset> </form> 
+                
+            <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+                <fieldset>
+                    <legend>Цифры</legend>
+                            <input type ="number" name ="number" pattern="[-2.5-2.5]" min="-2.5" max ="2.5" step="0.1">number:Диапазон от -2,5 до 2,5 с шагом 0,1<br>
+                            <input type="range" min="1" max="10" value="5">range:Максимальное 10 минимальное 1  
+                </fieldset> </form>
+
+<form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+    <fieldset>
+        <legend>Кнопки управления</legend>
+            <input type ="submit" value ="Отправить">     
+            <input type ="reset" value ="Сбросить"><br>       
+            <button><img src="../homework_general/image/email.jpg"></image></button>-при нажатии на эту кнопку ничего не происходит
+
+</fieldset></form>      
+</td>       
+</tr>
+</table>
+
+
+
+</body>
+</html>
