@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Registration Form</title> 
+    
+</head>
+<body>
+         
+    <h1 align="left">Registration Form</h1>
+    <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+    <fieldset>
+        First Name:
+           <input type ="text" name ="first name" required placeholder="Enter First Name"><br>
+        Last Name:
+           <input type ="text" name ="last name" required placeholder="Enter Last Name"> <br>
+        Email:
+           <input type ="email" name ="email" required placeholder="Enter Email Address"><br>
+        Password:
+           <input type ="password" name ="password"><br>
+           Gender:<br>
+           Male
+           <input type ="radio" name ="gender" value="Male"><br>
+           Female
+           <input type ="radio" name ="gender" value="Female"><br>
+           Other
+           <input type ="radio" name ="gender" value="Other"> <br>
+        Age:
+          <input type ="number" name ="age" pattern="[1-80]" min="1" max ="80" step="1"><br>
+        Preferences:<br>
+        Acrylic Painting
+           <input type ="checkbox" name ="acrylic painting" checked value="1"><br>
+        Oil Painting
+           <input type ="checkbox" name ="oil painting" checked value="2"><br>
+        Water Color Painting
+           <input type ="checkbox" name ="water color painting" checked value="3"><br>
+        Select occupation:
+            <select name="occupation" size="1">
+                <option value="1">Student</option>
+                <option value="2">Pensioner</option>
+                <option value="3">Housewife</option></select>
+                <br>
+                Bio
+                <textarea name ="address" cols="20" raws="10" required placeholder="Share few lines about yourself.."></textarea><br>
+        <input type ="reset" value ="RESET"> 
+        <input type ="submit" value ="SUBMIT">    
+  
+</fieldset></form>      
+</body>
+</html>

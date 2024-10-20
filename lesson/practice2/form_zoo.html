@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FORM4ZOO</title> 
+      
+</head>
+<body>
+         
+    <h1 align="left">Форма заявки на работу в зоопарке</h1><br>
+    <em>Пожалуйста,заполните форму.Обязательные поля помечены *</em>
+
+
+    <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+    <fieldset>
+        <legend>Контактаная информация</legend>
+        <table width="50%">
+            <tr>
+                <td width ="30%">Имя*</td>
+                <td><input type ="text" name ="name" required placeholder ="обязательное поле"></td>
+            </tr>
+
+            <tr>
+                <td width ="30%">Телефон<br></td> 
+                <td><input type = "tel" name = "tel"> <br></td>   
+            </tr>
+
+            <tr>
+                <td width ="30%">Email*</td>
+                <td><input type ="email" name ="email" required placeholder ="обязательное поле"><br></td>
+            </tr>    
+        </table>
+    </fieldset></form>
+
+    <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <table width="50%">
+                <tr>
+                    <td width="30%">Возраст*</td>
+                    <td><input type ="text" name ="age" required placeholder ="обязательное поле"><br></td>
+                </tr>
+
+                <tr>
+                    <td width ="30%">Пол</td>
+                    <td><select name="gender" size="1">
+            <option value="1">Женщина</option>
+            <option value="2">Мужчина</option>
+            <option value="3">Другое</option></select>
+            <br></td>
+            </tr>
+
+            <tr>
+                <td width ="30%">Перечислите личные качества</td>
+                <td><textarea name ="about yourself" cols="20" raws="50"></textarea><br></td>
+            </tr></table>
+        </fieldset></form>
+
+
+        <form action = "http://fe.it-academy.by/TestForm.php" method ="GET" target ="_blank">
+        <fieldset>
+        <legend>Выберите ваших любимых животных</legend>
+            <table width ="50%">
+            <tr>
+            <td>
+            Зебра
+           <input type ="checkbox" name ="зебра" checked value="1"><br>
+            Слон
+           <input type ="checkbox" name ="слон" checked value="2"><br>
+            </td>
+
+            <td>
+            Кошка
+           <input type ="checkbox" name ="кошка" checked value="3"><br>
+           Антилопа
+           <input type ="checkbox" name ="антилопа" checked value="4"><br>
+           </td>
+
+           <td>
+            Анаконда
+            <input type ="checkbox" name ="анаконда" checked value="5"><br>
+            Голубь
+            <input type ="checkbox" name ="голубь" checked value="6"><br>
+            </td>
+
+            <td>
+            Человек
+            <input type ="checkbox" name ="человек" checked value="7"><br>
+            Краб
+            <input type ="checkbox" name ="краб" checked value="8"><br>
+            </td>
+        
+        </table>
+        </fieldset>
+            <input type ="submit" value ="Отправить информацию">     
+        </form>
+
+
+           
+</body>
+</html>
