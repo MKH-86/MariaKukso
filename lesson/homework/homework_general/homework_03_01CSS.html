@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Адаптивная навигация</title>
+    <style>
+     
+        div.MenuLevel1 { width: 100px }
+        div.MenuLevel1 > div { background: #bbb8b8; border: solid black 1px; position: relative; cursor: pointer;}
+        div.MenuLevel2 { width: 150px; display: none }
+        div.MenuLevel2 > div { background-color: #bbb8b8;; border: solid black 1px; cursor: pointer;}
+        div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: absolute; left: 80%; top: 90%; z-index: 1 }
+        
+      </style>
+
+<body style="float:left">
+   
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius:4px;">Понедельник
+        <div class='MenuLevel2'>
+             <div style="border-radius: 4px;">Завтрак</div>
+             <div style="border-radius: 4px;">Обед</div>
+             <div style="border-radius: 4px;">Ужин</div></div></div></div>
+ 
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius: 4px;">Вторник
+        <div class='MenuLevel2'>
+            <div style="border-radius: 4px;">Завтрак</div>
+            <div style="border-radius: 4px;">Обед</div>
+            <div style="border-radius: 4px;">Ужин</div></div></div></div>
+  
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius: 4px;">Среда
+        <div class='MenuLevel2' style="border-radius: 8px;">
+            <div style="border-radius: 4px;">Завтрак</div>
+            <div style="border-radius: 4px;">Обед</div>
+            <div style="border-radius: 4px;">Ужин</div></div></div></div>
+
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius: 4px;">Четверг
+        <div class='MenuLevel2' style="border-radius: 8px;">
+            <div style="border-radius: 4px;">Завтрак</div>
+            <div style="border-radius: 4px;">Обед</div>
+            <div style="border-radius: 4px;">Ужин</div></div></div></div>
+    
+ 
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius: 4px;">Пятница
+        <div class='MenuLevel2' style="border-radius: 8px;">
+            <div style="border-radius: 4px;">Завтрак</div>
+            <div style="border-radius: 4px;">Обед</div>
+            <div style="border-radius: 4px;">Ужин</div></div></div></div>
+    
+
+    <div class='MenuLevel1' style="display:inline-block;">
+        <div style="border-radius: 4px;">Суббота
+        <div class='MenuLevel2' style="border-radius: 8px;">
+            <div style="border-radius: 4px;">Завтрак</div>
+            <div style="border-radius: 4px;">Обед</div>
+            <div style="border-radius: 4px;">Ужин</div></div></div></div>
+
+
+</body>
+</html>
