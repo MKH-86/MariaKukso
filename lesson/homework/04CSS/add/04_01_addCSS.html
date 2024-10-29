@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Комбинаторы. Псевдоэлементы и псевдоклассы</title>
+    <style>
+
+        div {
+            border: 1px solid grey; 
+            border-radius: 0 13px 0 13px; 
+            width:800px;
+            padding:5px;
+            }
+
+        span > a[href$="Microsoft_Word"]:before
+            {content: url("arrow.png");}
+
+        span > a[href$="Portable_Document_Format"]:before
+            {content: url("arrow.png");}
+
+        span > a[href$=".ZIP"]:before
+            {content: url("arrow.png");}
+
+        div > a[href$="Microsoft_Word"]:after
+            {content: url("word.jpeg");}
+
+        div > a[href$="Portable_Document_Format"]:after
+            {content: url("add.png");}
+
+        div > a[href$=".ZIP"]:after
+            {content: url("arch.gif");}
+
+
+        li a[href$="_Word"]:hover
+            {
+                background-image: url(word.jpeg);
+                background-position: right center;
+                background-repeat: no-repeat;
+                padding-right: 17px;
+            }
+
+        li a[href$="_Format"]:hover
+            {
+            background-image: url(add.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 17px;
+            }
+
+        li a[href$=".ZIP"]:hover
+            {
+            background-image: url(arch.gif);
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 17px;
+            }       
+
+        li:before 
+           {
+            content: url("list.jpeg"); 
+           }
+
+        
+
+    </style>
+</head>
+
+
+<body>
+    <h1>Форматы файлов</h1>
+    <div>
+        <span>
+        .DOC или .doc (от англ. <a href="https://ru.wikipedia.org/wiki/Microsoft_Word">document</a>)-расширение имени файла,используемое для файлов,<br>
+        представляющих текст, с разметкой или без.Расширение .DOC часто использовалось для <br>
+        обозначения простых текстовых файлов без формирования,однако позже стало<br>
+        использоваться для двоичных форматов с разметкой.</span><br>
+        <a href="https://ru.wikipedia.org/wiki/Microsoft_Word"> Документ MS Word</a></div>
+    <div>
+        <span>
+            Portable Document Format(<a href="https://ru.wikipedia.org/wiki/Portable_Document_Format">PDF</a>)-межплатформенный формат электронных документов,<br>
+        разработанный формой Adobe Systems с использованием ряда возможностей языка<br>
+        Postscript.</span><br>
+        <a href="https://ru.wikipedia.org/wiki/Portable_Document_Format"> Документ PDF</a></div>
+
+    <div>
+        <span>
+            ZIP-популярный формат сжатия данных и архивации файлов.Файл в этом формате<br>
+        обычно имеет расширение <a href="https://ru.wikipedia.org/wiki/.ZIP">zip</a> и хранит в сжатом или несжатом виде один или несколько <br>
+        файлов, которые можно из него извлечь путем распаковки с помощью специальной<br>
+        программы.</span><br>
+        <a href ="https://ru.wikipedia.org/wiki/.ZIP"> Архив</a></div>
+
+  
+        <h2>Это список файлов</h2>
+
+    <ul>
+        <li><a href="https://ru.wikipedia.org/wiki/Microsoft_Word">Документ MS</a></li>      
+        <li><a href="https://ru.wikipedia.org/wiki/Portable_Document_Format">Документ PDF</a></li>     
+        <li><a href ="https://ru.wikipedia.org/wiki/.ZIP">Архив</a></li>
+    </ul>
+
+</body>
+</html>
