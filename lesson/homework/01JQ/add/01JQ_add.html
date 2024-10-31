@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Проверка пароля</title>
+    <style>
+        input {
+            margin-bottom: 2px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Проверка пароля</h1>
+    <form action="http://fe.it-academy.by/TestForm.php" method="POST" target="_blank">
+        <fieldset>
+                <input type="password" name="firstPassword" placeholder required;>*Пароль<br>
+                <input type="password" name="secondPassword" placeholder required;>*Повторите пароль<br>
+                <button type="submit" id="btn">Отправить</button>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha-256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
+
+    <script>
+        $(document).ready(function ($) {
+
+            $("input:password").on('keyup', function () {
+
+                var firstPasswordValue = $("input[name='firstPassword']").val();
+                var secondPasswordValue = $("input[name='secondPassword']").val();
+
+                if (firstPasswordValue == secondPasswordValue || secondPasswordValue == '') {
+                    $("input:password").css('backgroundColor', 'green')
+                   
+                } else {
+                    $("input:password").css('backgroundColor', 'red')
+                 
+                }
+            });
+
+            $("input[name='firstPassword']").on('mouseenter', function () {
+                $("input[name='firstPassword']").css('borderColor', 'blue')
+            });
+
+            $("input[name='firstPassword']").on('mouseleave', function () {
+                $("input[name='firstPassword']").css('borderColor', 'grey')
+            });
+
+            $("input[name='secondPassword']").on('mouseenter', function () {
+                $("input[name='secondPassword']").css('borderColor', 'blue')
+            });
+
+            $("input[name='secondPassword']").on('mouseleave', function () {
+                $("input[name='secondPassword']").css('borderColor', 'grey')
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
